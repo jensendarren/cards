@@ -9,7 +9,7 @@ defmodule Cards do
   ## Examples
 
       iex> Cards.create_deck
-      # a deck of cards
+      ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades", "Five of Spades", "Ace of Hearts", "Two of Hearts", "Three of Hearts", "Four of Hearts", "Five of Hearts", "Ace of Diamonds", "Two of Diamonds", "Three of Diamonds", "Four of Diamonds", "Five of Diamonds", "Ace of Clubs", "Two of Clubs", "Three of Clubs", "Four of Clubs", "Five of Clubs"]
 
   """
   def create_deck do
@@ -26,7 +26,8 @@ defmodule Cards do
 
   ## Examples
 
-      iex> Cards.shuffle(deck)
+      # iex> deck = Cards.create_deck
+      # iex> Cards.shuffle(deck)
       # a suffled deck of cards
 
   """
@@ -46,7 +47,7 @@ defmodule Cards do
   ## Examples
 
       iex> deck = Cards.create_deck
-      iex> {hand, deck} = Cards.deal(deck, 1)
+      iex> {hand, _deck} = Cards.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
 
